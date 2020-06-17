@@ -1,0 +1,42 @@
+---
+- HOSTNAME: Switch1
+  VLAN_1_SVI_IP: 10.0.0.10 255.255.255.0
+  DEFAULT_GW: 10.0.0.1
+  VLAN_LIST:
+    vlan100:
+      VLAN_ID: 100
+      VLAN_NAME: WTS
+    vlan200:
+      VLAN_ID: 200
+      VLAN_NAME: FMS
+    vlan300:
+      VLAN_ID: 300
+      VLAN_NAME: DRS
+
+- HOSTNAME: Switch2
+  VLAN_1_SVI_IP: 10.0.0.20 255.255.255.0
+  DEFAULT_GW: 10.0.0.1
+  VLAN_LIST:
+    vlan100:
+      VLAN_ID: 100
+      VLAN_NAME: WTS
+    vlan200:
+      VLAN_ID: 200
+      VLAN_NAME: FMS
+    vlan300:
+      VLAN_ID: 300
+      VLAN_NAME: DRS
+
+- HOSTNAME: Switch3
+  VLAN_1_SVI_IP: 10.0.0.30 255.255.255.0
+  DEFAULT_GW: 10.0.0.1
+  VLAN_LIST:
+    vlan100:
+      VLAN_ID: 100
+      VLAN_NAME: WTS
+    vlan200:
+      VLAN_ID: 200
+      VLAN_NAME: FMS
+    vlan300:
+      VLAN_ID: 300
+      VLAN_NAME: DRS
