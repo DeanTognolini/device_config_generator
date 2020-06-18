@@ -5,13 +5,13 @@
   VLAN_LIST:
     vlan100:
       VLAN_ID: 100
-      VLAN_NAME: WTS
+      VLAN_NAME: Management
     vlan200:
       VLAN_ID: 200
-      VLAN_NAME: FMS
+      VLAN_NAME: Wired
     vlan300:
       VLAN_ID: 300
-      VLAN_NAME: DRS
+      VLAN_NAME: Wireless
 
 - HOSTNAME: Switch2
   VLAN_1_SVI_IP: 10.0.0.20 255.255.255.0
@@ -19,13 +19,13 @@
   VLAN_LIST:
     vlan100:
       VLAN_ID: 100
-      VLAN_NAME: WTS
+      VLAN_NAME: Management
     vlan200:
       VLAN_ID: 200
-      VLAN_NAME: FMS
+      VLAN_NAME: Wired
     vlan300:
       VLAN_ID: 300
-      VLAN_NAME: DRS
+      VLAN_NAME: Wireless
 
 - HOSTNAME: Switch3
   VLAN_1_SVI_IP: 10.0.0.30 255.255.255.0
@@ -33,10 +33,10 @@
   VLAN_LIST:
     vlan100:
       VLAN_ID: 100
-      VLAN_NAME: WTS
+      VLAN_NAME: Management
     vlan200:
       VLAN_ID: 200
-      VLAN_NAME: FMS
+      VLAN_NAME: Wired
     vlan300:
       VLAN_ID: 300
-      VLAN_NAME: DRS
+      VLAN_NAME: Wireless
