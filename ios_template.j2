@@ -1,0 +1,7 @@
+hostname {{ hostname }}
+!
+interface fastEthernet0/0
+ ip address {{ ip_address }} {{ subnet_mask }}
+ no shutdown
+!
+ip default-gateway {{ default_gateway }}
