@@ -1,6 +1,8 @@
 # device_config_generator
 Generates network device configurations using Jinja2 templates.
 
+Input the variable information into the XLSX and run `rendered.py`.
+
 # Requirements
 See requirements.txt
 
