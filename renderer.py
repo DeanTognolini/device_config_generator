@@ -1,23 +1,28 @@
-#!/bin/python
-import yaml
+import pandas as pd
 from jinja2 import Template
 
-def main():
-    # open variables in YAML file, read the file, load the variables into variable called my_vars
-    var_file = open("variables.yaml")
-    var_data = var_file.read()
-    my_vars = yaml.full_load(var_data)
+# Read data from XLS file
+data = pd.read_excel('config_data.xlsx')
 
-    # open and read device template file that contains Jinja2 variables and store it in a variable called template
-    template_file = open("template.j2")
-    template_data = template_file.read()
-    template = Template(template_data)
+# Open and read the template file
+with open('ios_template.j2') as f:
+    template_str = f.read()
 
-    # render the template for each device based on the YAML variables stored in my_vars. Write to file and save.
-    for device in my_vars:
-        outfile = open(device["HOSTNAME"] + ".conf", "w")
-        outfile.write(template.render(device))
-        outfile.close()
+# Compile the template
+template = Template(template_str)
 
-if __name__ == "__main__":
-    main()
+# Iterate through rows in dataframe
+for index, row in data.iterrows():
+    # Assign variables from XLS data
+    hostname = row['hostname']
+    ip_address = row['ip_address']
+    subnet_mask = row['subnet_mask']
+    default_gateway = row['default_gateway']
+
+    # Use template to generate configuration
+    config = template.render(hostname=hostname, ip_address=ip_address,
+                             subnet_mask=subnet_mask, default_gateway=default_gateway)
+
+    # Write configuration to file
+    with open(f"{hostname}.cfg", "w") as f:
+        f.write(config)
