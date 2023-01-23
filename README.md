@@ -10,7 +10,7 @@ See requirements.txt
 
 ## PowerShell
 ```shell
-git clone https://github.com/shamske/device_config_generator
+git clone https://github.com/DeanTognolini/device_config_generator
 cd device_config_generator
 ./pyenv/Scripts/activate.ps1
 pip install -r requirements.txt
@@ -19,7 +19,7 @@ python renderer.py
 
 ## Bash
 ```shell
-git clone https://github.com/shamske/device_config_generator
+git clone https://github.com/DeanTognolini/device_config_generator
 cd device_config_generator
 python -m venv device_config_generator
 pip install -r requirements.txt
