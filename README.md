@@ -12,7 +12,8 @@ See requirements.txt
 ```shell
 git clone https://github.com/DeanTognolini/device_config_generator
 cd device_config_generator
-./pyenv/Scripts/activate.ps1
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python renderer.py  
 ```
